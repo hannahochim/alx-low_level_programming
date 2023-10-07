@@ -3,14 +3,13 @@
 #include <stdio.h>
 /**
  * main - This assigns a random number to n when executed
- * Description: This will print the last digit of the number 
+ * Description: This will print the last digit of the number
  * stored in the variable n everytime it is executed
  * Return: returns 0 on success
  */
 int main(void)
 {
 	int n, m;
-
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	m = n % 10;
