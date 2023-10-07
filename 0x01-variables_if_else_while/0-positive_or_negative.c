@@ -3,9 +3,11 @@
 #include <stdio.h>
 
 /**
- * main - This code assign a random number to the variable n each time it is executed.
+ * main - This code assign a random number to
+ * the variable n each time it is executed.
  *
- * Description: It is designed to print whether the number stored in the variable n is positive or negative.
+ * Description: It is designed to print whether
+ * the number stored in the variable n is positive or negative.
  * Return: Prints 0 on success
  */
 
