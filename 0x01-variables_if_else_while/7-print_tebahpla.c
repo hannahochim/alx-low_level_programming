@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * main - Code designed to print lower case 
+ * main - Code designed to print lower case
  * alphabet
  * Description: This program prints lower case
  * alphabets in reverse, followed by a new line
