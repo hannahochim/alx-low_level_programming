@@ -2,9 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - This assigns a random number to n when executed
- * Description: This will print the last digit of the number
- * stored in the variable n everytime it is executed
+ * main - Code prints random numbers
+ * Description: Prints the last digit of random numbers that is
+ * assigned to variable n each time the program is executed
  * Return: returns 0 on success
  */
 int main(void)
