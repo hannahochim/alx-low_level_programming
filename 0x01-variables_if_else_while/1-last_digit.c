@@ -3,12 +3,12 @@
 #include <time.h>
 
 /**
- * main: This contains the main code
+ * main: This contains the main code.
  *
  * Description: This prints and analyses
- * the last digit of a rando number
+ * the last digit of a rando number.
  *
- * return: returns 0 on success
+ * return: returns 0 on success.
  */
 
 int main(void)
