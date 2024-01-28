@@ -3,9 +3,8 @@
 #include <time.h>
 
 /**
- * Author - Hannah L. Ochim
- *
  * main - contains main code, all actually.
+ *
  * Description: This code is designed to generate
  * a random number, then print if it is positive,
  * negative or zero.
