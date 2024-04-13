@@ -28,7 +28,7 @@ int main(void)
 			putchar(t + '0');
 			putchar(u + '0');
 
-			if (r < 800)
+			if (r < 789)
 			{
 				putchar(',');
 				putchar(' ');
