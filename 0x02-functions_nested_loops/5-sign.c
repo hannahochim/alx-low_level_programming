@@ -2,6 +2,7 @@
 
 /**
  * print_sign - main block
+ * @n: number being tested
  *
  * Description: Print the sign
  * of a number
