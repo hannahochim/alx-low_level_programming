@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- * _abs: Print absolute value
+ * _abs - Print absolute value
  * of inputed number.
+ *
+ * @n: inputed number
  *
  * Return: returns int value
  * on success
