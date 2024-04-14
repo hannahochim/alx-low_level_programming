@@ -1,6 +1,6 @@
 #include "main.h"
 
-/** 
+/**
  * print_sign - main block
  *
  * Description: Print the sign
@@ -24,6 +24,6 @@ int print_sign(int n)
 	else
 	{
 		_putchar('0');
-		return(0);
+		return (0);
 	}
 }
