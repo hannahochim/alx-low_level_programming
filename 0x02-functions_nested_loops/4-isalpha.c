@@ -6,6 +6,8 @@
  * Description: This checks for
  * alphabetic characters.
  *
+ * @c: Character to be checked
+ *
  * Return: returns 1 on success and
  * 0 if otherwise
  */
