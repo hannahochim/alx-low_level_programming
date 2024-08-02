@@ -12,7 +12,7 @@ int _sq_rt(int n, int x);
 int is_prime_number(int n);
 int is_prime(int n, int x);
 int _is_pal(char *s);
-int __pal(char *s, int first, int last);
+int __pal(char *s, int l);
 int wildcmp(char *s1, char *s2);
 
 #endif
