@@ -2,11 +2,12 @@
 #include <string.h>
 
 /**
- * _strspn - function thaty gets the lenght of a prefix substring
+ * _strchr - function that locates a character
+ * in a string
  * @s: string to be scanned
- * @accept: string containing the list of characters to match
+ * @c: character to look for
  * Description: returns the first occurance of the char c in string
- * Return: returns int from s
+ * Return: int from s
 */
 
 char *_strchr(char *s, char c)
