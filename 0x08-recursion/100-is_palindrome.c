@@ -1,53 +1,50 @@
 #include "main.h"
 
 /**
- * _is_pal - returns length.
- * @s: int type
- * Return: character
- **/
-int _is_pal(char *s)
-{
-int first, last;
+ * _strlen_recursion - return length
+ * @s: pointer to string params
+ * Return: recursion
+ */
 
-first = 0;
-last = _strlen_recursion(s) - 1;
-return (__pal(s, first, last));
-}
-
-/**
- * __pal - entry
- * Desc: palindrome
- * @s: character
- * @first: integer
- * @last: integer
- * Return: Recursion
- **/
-int __pal(char *s, int first, int last)
-{
-if (first > last)
-{
-return (1);
-}
-else if (s[first] == s[last])
-{
-return (__pal(s, first + 1, last - 1));
-}
-else
-return (0);
-}
-
-/**
- * _strlen_recursion - Function returns length
- * os a string
- * Desc: _strlen_recursion
- * @s: character
- * Return: String length
- **/
 int _strlen_recursion(char *s)
 {
-if (*s != '\0')
-{
-return (1 + _strlen_recursion(s + 1));
+	if (!*s)
+	{
+		return (0);
+	}
+	return (1 + _strlen_recursion(++s));
 }
-return (0);
+
+/**
+ * __pal - pal
+ * @s: pointer to string
+ * @l: position
+ * Return: boolean
+ */
+
+int __pal(char *s, int l)
+{
+	if (l < 1)
+	{
+		return (1);
+	}
+
+	if (*s == *(s + l))
+	{
+		return (__pal(s + 1, l - 2));
+	}
+	return (0);
+}
+
+/**
+ * _is_pal - palindrome
+ * @s: pointer to string
+ * Return: recursion
+ */
+
+int _is_pal(char *s)
+{
+	int len = _strlen_recursion(s);
+
+	return (__pa1(s, len - 1));
 }
