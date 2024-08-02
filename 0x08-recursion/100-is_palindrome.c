@@ -37,14 +37,14 @@ int __pal(char *s, int l)
 }
 
 /**
- * _is_pal - palindrome
+ * is_palindrome - palindrome
  * @s: pointer to string
  * Return: recursion
  */
 
-int _is_pal(char *s)
+int is_palindrome(char *s)
 {
 	int len = _strlen_recursion(s);
 
-	return (__pa1(s, len - 1));
+	return (__pal(s, len - 1));
 }
