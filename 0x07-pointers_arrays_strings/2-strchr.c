@@ -1,0 +1,25 @@
+#include "main.h"
+#include <string.h>
+
+/**
+ * _strspn - function thaty gets the lenght of a prefix substring
+ * @s: string to be scanned
+ * @accept: string containing the list of characters to match
+ * Description: returns the first occurance of the char c in string
+ * Return: returns int from s
+*/
+
+char *_strchr(char *s, char c)
+{
+	int n = 0;
+
+	while (s[n] != 0)
+	{
+		if (s[n] == c)
+			return (s + n);
+		n++;
+	}
+	if (c == 0)
+		return (s + n);
+	return (0);
+}
