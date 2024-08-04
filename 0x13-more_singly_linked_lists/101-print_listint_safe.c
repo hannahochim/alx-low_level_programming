@@ -9,7 +9,7 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t cnt = 0;
+	size_t count = 0;
 	size_t index = 0;
 	listint_t const **array;/* A */
 
@@ -21,7 +21,7 @@ size_t print_listint_safe(const listint_t *head)
 
 	while (head != NULL)/* B */
 	{
-		for (i = 0; i < cnt; i++)/* C*/
+		for (i = 0; i < count; i++)/* C*/
 		{
 			if (head == array[i])/* D */
 			{
@@ -35,13 +35,13 @@ size_t print_listint_safe(const listint_t *head)
 
 		if (flag == 1)/* E */
 			break;
-		array[cnt] = head;
+		array[count] = head;
 		head = head->next;
-		cnt++;
+		count++;
 	}
 
 	i = 0;
-	while (i < cnt)/* F */
+	while (i < count)/* F */
 	{
 		printf("[%p] %d\n", (void *)array[i], array[i]->n);
 		i++;
@@ -51,5 +51,5 @@ size_t print_listint_safe(const listint_t *head)
 		printf("-> [%p] %d\n", (void *)array[index], array[index]->n);
 	}
 	free(array);
-	return (cnt);
+	return (count);
 }
