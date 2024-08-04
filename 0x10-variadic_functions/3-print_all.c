@@ -22,7 +22,7 @@ void print_char(va_list arg)
 
 /**
  * print_int - Prints an int.
- * @arg: A list of arguments 
+ * @arg: A list of arguments
  */
 void print_int(va_list arg)
 {
