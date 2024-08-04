@@ -1,55 +1,29 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - Function prints a linked list
+ * print_listint_safe - prints a linked list, safely
  * @head: list of type listint_t to print
  *
  * Return: number of nodes in the list
  */
-
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t count = 0;
-	size_t index = 0;
-	listint_t const **array;/* A */
+	size_t num = 0;
+	long int diff;
 
-	array = malloc(sizeof(listint_t *) * 1024);
-	if (!array)
-		exit(98);
-	unsigned int i = 0;
-	unsigned int flag = 0;
-
-	while (head != NULL)/* B */
+	while (head)
 	{
-		for (i = 0; i < count; i++)/* C*/
+		diff = head - head->next;
+		num++;
+		printf("[%p] %d\n", (void *)head, head->n);
+		if (diff > 0)
+			head = head->next;
+		else
 		{
-			if (head == array[i])/* D */
-			{
-				flag = 1;
-				index = i;
-				break;
-			}
-			else
-				flag = 0;
-		}
-
-		if (flag == 1)/* E */
+			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
 			break;
-		array[count] = head;
-		head = head->next;
-		count++;
+		}
 	}
 
-	i = 0;
-	while (i < count)/* F */
-	{
-		printf("[%p] %d\n", (void *)array[i], array[i]->n);
-		i++;
-	}
-	if (flag == 1)/* G */
-	{
-		printf("-> [%p] %d\n", (void *)array[index], array[index]->n);
-	}
-	free(array);
-	return (count);
+	return (num);
 }
