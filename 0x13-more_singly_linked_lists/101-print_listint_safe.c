@@ -9,22 +9,47 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t num = 0;
-	long int diff;
+	size_t cnt = 0;
+	size_t index = 0;
+	listint_t const **array;/* A */
 
-	while (head)
+	array = malloc(sizeof(listint_t *) * 1024);
+	if (!array)
+		exit(98);
+	unsigned int i = 0;
+	unsigned int flag = 0;
+
+	while (head != NULL)/* B */
 	{
-		diff = head - head->next;
-		num++;
-		printf("[%p] %d\n", (void *)head, head->n);
-		if (diff > 0)
-			head = head->next;
-		else
+		for (i = 0; i < cnt; i++)/* C*/
 		{
-			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
-			break;
+			if (head == array[i])/* D */
+			{
+				flag = 1;
+				index = i;
+				break;
+			}
+			else
+				flag = 0;
 		}
+
+		if (flag == 1)/* E */
+			break;
+		array[cnt] = head;
+		head = head->next;
+		cnt++;
 	}
 
-	return (num);
+	i = 0;
+	while (i < cnt)/* F */
+	{
+		printf("[%p] %d\n", (void *)array[i], array[i]->n);
+		i++;
+	}
+	if (flag == 1)/* G */
+	{
+		printf("-> [%p] %d\n", (void *)array[index], array[index]->n);
+	}
+	free(array);
+	return (cnt);
 }
